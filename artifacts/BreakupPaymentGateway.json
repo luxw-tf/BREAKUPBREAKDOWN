@@ -1,0 +1,216 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_scanPrice",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "FundsWithdrawn",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "payer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "paymentIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "PaymentReceived",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "oldPrice",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "ScanPriceUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getPaymentCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "payForScan",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "payments",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "payer",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "scanPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "setScanPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "totalPaidBy",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "bytecode": "6080604052348015600e575f5ffd5b506040516106f93803806106f9833981016040819052602b916043565b5f80546001600160a01b031916331790556001556059565b5f602082840312156052575f5ffd5b5051919050565b610693806100665f395ff3fe608060405260043610610087575f3560e01c8063af32a03f11610057578063af32a03f1461014a578063b20905a61461015e578063ba21fe9f1461017d578063cb329aee146101a8578063f2fde38b146101b0575f5ffd5b80633ccfd60b1461009257806364a4235b146100a857806387d81789146100d05780638da5cb5b14610114575f5ffd5b3661008e57005b5f5ffd5b34801561009d575f5ffd5b506100a66101cf565b005b3480156100b3575f5ffd5b506100bd60015481565b6040519081526020015b60405180910390f35b3480156100db575f5ffd5b506100ef6100ea3660046105cc565b61031f565b604080516001600160a01b0390941684526020840192909252908201526060016100c7565b34801561011f575f5ffd5b505f54610132906001600160a01b031681565b6040516001600160a01b0390911681526020016100c7565b348015610155575f5ffd5b506002546100bd565b348015610169575f5ffd5b506100a66101783660046105cc565b61035a565b348015610188575f5ffd5b506100bd6101973660046105e3565b60036020525f908152604090205481565b6100a66103c8565b3480156101bb575f5ffd5b506100a66101ca3660046105e3565b61053a565b5f546001600160a01b031633146102015760405162461bcd60e51b81526004016101f890610610565b60405180910390fd5b47806102465760405162461bcd60e51b81526020600482015260146024820152734e6f2066756e647320746f20776974686472617760601b60448201526064016101f8565b5f80546040516001600160a01b039091169083908381818185875af1925050503d805f8114610290576040519150601f19603f3d011682016040523d82523d5f602084013e610295565b606091505b50509050806102da5760405162461bcd60e51b815260206004820152601160248201527015da5d1a191c985dd85b0819985a5b1959607a1b60448201526064016101f8565b5f546040518381526001600160a01b03909116907feaff4b37086828766ad3268786972c0cd24259d4c87a80f9d3963a3c3d999b0d9060200160405180910390a25050565b6002818154811061032e575f80fd5b5f9182526020909120600390910201805460018201546002909201546001600160a01b03909116925083565b5f546001600160a01b031633146103835760405162461bcd60e51b81526004016101f890610610565b600180549082905560408051828152602081018490527f6c01baeac1e922cd152a1e754d18bb0368e2eeea4d0000e5d9597ff098bba083910160405180910390a15050565b6001543410156104115760405162461bcd60e51b8152602060048201526014602482015273125b9cdd59999a58da595b9d081c185e5b595b9d60621b60448201526064016101f8565b600280546040805160608101825233808252346020808401828152428587019081526001880189555f98895294517f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace6003808a0291820180546001600160a01b0319166001600160a01b039094169390931790925591517f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5acf83015594517f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ad0909101559186529190529083208054929391929091906104f0908490610638565b90915550506040805134815242602082015290810182905233907f750e6bbedd4312ada35caa75e07fc0b85f1a6fc9c675e6962aef8469187110979060600160405180910390a250565b5f546001600160a01b031633146105635760405162461bcd60e51b81526004016101f890610610565b6001600160a01b0381166105ab5760405162461bcd60e51b815260206004820152600f60248201526e496e76616c6964206164647265737360881b60448201526064016101f8565b5f80546001600160a01b0319166001600160a01b0392909216919091179055565b5f602082840312156105dc575f5ffd5b5035919050565b5f602082840312156105f3575f5ffd5b81356001600160a01b0381168114610609575f5ffd5b9392505050565b6020808252600e908201526d139bdd08185d5d1a1bdc9a5e995960921b604082015260600190565b8082018082111561065757634e487b7160e01b5f52601160045260245ffd5b9291505056fea26469706673582212206a101ab14fb5d6082b1e01834d12dce70b3202aec0e4f7d7bf5d50e5cb68dad564736f6c63430008220033"
+}

@@ -1,0 +1,11 @@
+{
+  "network": "monad-testnet",
+  "chainId": 10143,
+  "contractAddress": "0xD450391a2D444571899a998a119B817BE587e4B5",
+  "deployer": "0xDdaDc4b8f2f7788410E80333a6dF3Db35D5020Df",
+  "scanPrice": "0.01",
+  "currency": "MON",
+  "rpc": "https://testnet-rpc.monad.xyz/",
+  "explorer": "https://testnet.monadexplorer.com/address/0xD450391a2D444571899a998a119B817BE587e4B5",
+  "deployedAt": "2026-03-28T12:04:48.525Z"
+}
