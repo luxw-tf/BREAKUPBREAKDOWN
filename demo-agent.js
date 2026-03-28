@@ -271,7 +271,7 @@ export function initAgentDemo() {
 
         try {
             // 1. Hit the API (expect 402)
-            const initialRes = await fetch('http://localhost:3000/api/scan', {
+            const initialRes = await fetch('/api/scan', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ code })
@@ -286,7 +286,7 @@ export function initAgentDemo() {
                 signer = await provider.getSigner();
 
                 // Get contract info
-                const infoRes = await fetch('http://localhost:3000/api/contract-info');
+                const infoRes = await fetch('/api/contract-info');
                 const info = await infoRes.json();
 
                 // Call payForScan()
@@ -345,7 +345,7 @@ export function initAgentDemo() {
                 // Start visual mock pipeline in parallel to the fetch
                 const pipelineComplete = startPipeline();
 
-                const auditRes = await fetch('http://localhost:3000/api/scan', {
+                const auditRes = await fetch('/api/scan', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

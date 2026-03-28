@@ -220,8 +220,12 @@ app.post('/api/scan', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`\n[BreakupBreakdown] API on http://localhost:${port}`);
-    console.log(`[x402] Monad Testnet (${CHAIN_ID}) | Contract: ${CONTRACT_ADDRESS || 'NOT DEPLOYED'}`);
-    console.log(`[Gemini] API Key: ${GEMINI_API_KEY ? '✅ Configured' : '❌ Missing (add GEMINI_API_KEY to .env)'}\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`\n[BreakupBreakdown] API on http://localhost:${port}`);
+        console.log(`[x402] Monad Testnet (${CHAIN_ID}) | Contract: ${CONTRACT_ADDRESS || 'NOT DEPLOYED'}`);
+        console.log(`[Gemini] API Key: ${GEMINI_API_KEY ? '✅ Configured' : '❌ Missing (add GEMINI_API_KEY to .env)'}\n`);
+    });
+}
+
+export default app;
