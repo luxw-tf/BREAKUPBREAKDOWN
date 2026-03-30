@@ -1338,3 +1338,74 @@ footer {
   height: 14px;
   border-width: 2px;
 }
+
+/* =========================================================================
+   Mobile View Optimizations (< 768px)
+========================================================================= */
+@media (max-width: 768px) {
+  /* Layout global fix */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    min-height: 100vh;
+    padding-top: calc(var(--spacing-xl) + 60px);
+    text-align: center;
+    padding-bottom: var(--spacing-lg);
+  }
+  
+  .hero-desc {
+    margin: 0 auto var(--spacing-lg);
+  }
+  
+  /* Reset grid bleeding and layout for illustration */
+  .hero-illustration {
+    transform: none !important;
+    margin-top: 2rem;
+  }
+  
+  .hero-title .text-accent::after {
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+  }
+
+  /* Core capabilities */
+  #features .card {
+    padding: var(--spacing-md);
+  }
+
+  /* Parallax timeline adaptive sizing */
+  .parallax-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .parallax-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .parallax-content {
+    height: auto;
+    min-height: 380px;
+  }
+  
+  .parallax-sticky {
+    padding-top: 2rem;
+  }
+
+  /* Pricing & CTA typography scale down */
+  .pricing-value {
+    font-size: 2.4rem;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .footer-grid {
+    gap: var(--spacing-lg);
+  }
+}
