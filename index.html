@@ -19,7 +19,7 @@
       <nav class="nav-links">
         <a href="#how-it-works">How It Works</a>
         <a href="#features">Features</a>
-        <a href="/pricing.html">Pricing</a>
+        <a href="#pricing">Pricing</a>
       </nav>
       <a href="/demo.html" class="btn">Get Demo</a>
     </div>
@@ -33,7 +33,8 @@
           <span class="sticker">Vulnerability Detected</span>
           <h1 class="hero-title">WE BREAK YOUR<br><span class="text-accent">SMART CONTRACTS.</span><br>SO THAT
             <br><span>NOBODY
-              ELSE CAN. </span><br></h1>
+              ELSE CAN. </span><br>
+          </h1>
           <p class="hero-desc">We simulate aggressive AI agent attacks to stress test Web3 protocols and generate
             actionable security reports before the real hackers do.</p>
           <div style="display: flex; gap: var(--spacing-sm);">
@@ -41,7 +42,8 @@
             <a href="#how-it-works" class="btn btn-outline">Explore Methodology</a>
           </div>
         </div>
-        <div class="hero-illustration" style="display: flex; align-items: center; justify-content: center; transform: translateY(-2rem);">
+        <div class="hero-illustration"
+          style="display: flex; align-items: center; justify-content: center; transform: translateY(-2rem);">
           <blockquote class="twitter-tweet" data-theme="light">
             <a href="https://twitter.com/leojrr/status/1901560276488511759"></a>
           </blockquote>
@@ -52,31 +54,88 @@
   </section>
 
   <!-- How It Works Section -->
-  <section id="how-it-works" style="background-color: var(--color-border); padding: var(--spacing-xl) 0;">
-    <div class="container">
-      <span class="sticker">Methodology</span>
-      <h2>How It Works</h2>
-      <p class="card-desc" style="margin-bottom: var(--spacing-lg);">The complete lifecycle of a simulated agentic
-        attack on your protocol.</p>
+  <section id="how-it-works" class="parallax-section">
+    <div class="parallax-wrapper">
+      <div class="parallax-sticky">
+        <div class="container parallax-container">
 
-      <div class="grid grid-3">
-        <div class="card">
-          <div class="step-number">01</div>
-          <h3 class="card-title">Initial Recon</h3>
-          <p class="card-desc">Our multi-agent system scans public source code, ABIs, and existing deployed contracts to
-            map protocol boundaries and entry points.</p>
-        </div>
-        <div class="card">
-          <div class="step-number">02</div>
-          <h3 class="card-title">Attack Simulation</h3>
-          <p class="card-desc">Agents run combinatorial fuzzing and exploit generative logic to attempt flash-loan
-            attacks, reentrancy, and logic bypasses in a fork environment.</p>
-        </div>
-        <div class="card">
-          <div class="step-number">03</div>
-          <h3 class="card-title">Vulnerability Report</h3>
-          <p class="card-desc">We compile the findings into a highly structured read-out with precise reproduction
-            steps, patch recommendations, and impact analysis.</p>
+          <div class="parallax-header">
+            <span class="sticker">Methodology</span>
+            <h2>How It Works</h2>
+            <p class="card-desc">The complete lifecycle of an agentic attack simulation.</p>
+          </div>
+
+          <div class="parallax-content">
+            <!-- Left side: Vertical Progress Track -->
+            <div class="parallax-track">
+              <div class="parallax-progress"></div>
+            </div>
+
+            <!-- Right side: Stacked Cards -->
+            <div class="parallax-cards">
+
+              <!-- Step 1 -->
+              <div class="parallax-card" data-step="0">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <div class="step-num">01</div>
+                <h3 class="step-title">Initial Recon</h3>
+                <p class="step-desc">Our multi-agent system parses public source code, fetches decompiled bytecode, and
+                  extracts ABIs to construct a deterministic map of protocol entry points and dependencies.</p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="parallax-card" data-step="1">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="step-num">02</div>
+                <h3 class="step-title">Attack Simulation</h3>
+                <p class="step-desc">Agents harness combinatorial fuzzing and symbolic execution inside a fully managed
+                  fork environment, attempting flash-loan attacks, reentrancy exploits, and logic bypasses.</p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="parallax-card" data-step="2">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <path d="M9 15l2 2 4-4"></path>
+                  </svg>
+                </div>
+                <div class="step-num">03</div>
+                <h3 class="step-title">Vulnerability Report</h3>
+                <p class="step-desc">Generated zero-day findings are compiled into structured read-outs containing exact
+                  PoC reproduction steps, call stack traces, and actionable patch recommendations.</p>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="parallax-card" data-step="3">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <div class="step-num">04</div>
+                <h3 class="step-title">Continuous Monitoring</h3>
+                <p class="step-desc">Post-deployment sentinels connect directly to the mempool, simulating pending
+                  transactions against protocol invariants to preemptively alert on emergent attack vectors.</p>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -121,6 +180,86 @@
     </div>
   </section>
 
+  <!-- Pricing Section -->
+  <section id="pricing"
+    style="padding: var(--spacing-xl) 0; background-color: var(--color-bg); border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--spacing-lg);">
+        <span class="sticker">Powered by the x402 Protocol</span>
+        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: var(--spacing-sm);">Pay Per Scan.<br><span
+            class="text-accent">No Subscriptions.</span></h2>
+        <p class="card-desc" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+          Connect your wallet, pay in MON on Monad Testnet, and unlock instant AI-powered vulnerability reports. No API
+          keys. No accounts. Just code.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Tier 1: Quick Scan -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Scout</div>
+          <div class="pricing-amount">
+            <span class="pricing-value">0.01</span>
+            <span class="pricing-currency">MON</span>
+          </div>
+          <p class="pricing-desc">Quick static analysis for a single contract. Ideal for rapid sanity checks on small
+            files.</p>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Single contract scan</li>
+            <li><span class="check">✓</span> AST parsing & mapping</li>
+            <li><span class="check">✓</span> Common vulnerability detection</li>
+            <li><span class="check">✓</span> Basic risk summary</li>
+            <li class="disabled"><span class="check">✗</span> Fuzzing sequences</li>
+            <li class="disabled"><span class="check">✗</span> Exploit synthesis</li>
+          </ul>
+          <a href="/demo.html" class="btn btn-outline" style="width: 100%; margin-top: auto;">Start Scan</a>
+        </div>
+
+        <!-- Tier 2: Deep Audit -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Breaker</div>
+          <div class="pricing-amount">
+            <span class="pricing-value">0.05</span>
+            <span class="pricing-currency">MON</span>
+          </div>
+          <p class="pricing-desc">Full multi-agent audit with combinatorial fuzzing and exploit generation for
+            production-bound contracts.</p>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Multi-contract protocol scan</li>
+            <li><span class="check">✓</span> Deep AST + symbolic execution</li>
+            <li><span class="check">✓</span> 10,000 fuzzing sequences</li>
+            <li><span class="check">✓</span> Exploit payload synthesis</li>
+            <li><span class="check">✓</span> Interactive threat matrix</li>
+            <li><span class="check">✓</span> Gas-optimized patch code</li>
+          </ul>
+          <a href="/demo.html" class="btn" style="width: 100%; margin-top: auto;">Break My Contract</a>
+        </div>
+
+        <!-- Tier 3: War Room -->
+        <div class="pricing-card">
+          <div class="pricing-tier">War Room</div>
+          <div class="pricing-amount">
+            <span class="pricing-value">0.25</span>
+            <span class="pricing-currency">MON</span>
+          </div>
+          <p class="pricing-desc">Full protocol stress test with economic attack modeling, flash-loan simulations, and a
+            comprehensive executive report.</p>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Everything in Breaker</li>
+            <li><span class="check">✓</span> Flash-loan attack simulation</li>
+            <li><span class="check">✓</span> DeFi economic stress testing</li>
+            <li><span class="check">✓</span> Cross-contract dependency analysis</li>
+            <li><span class="check">✓</span> Executive risk report (PDF)</li>
+            <li><span class="check">✓</span> Priority 24h turnaround</li>
+          </ul>
+          <a href="/demo.html" class="btn btn-outline" style="width: 100%; margin-top: auto;">Contact Us</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- CTA Section -->
   <section id="demo" class="cta-section">
@@ -150,7 +289,7 @@
           <ul class="footer-links">
             <li><a href="#">Methodology</a></li>
             <li><a href="#">Agent Arsenal</a></li>
-            <li><a href="#">Pricing</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#">Sample Reports</a></li>
           </ul>
         </div>
