@@ -1343,13 +1343,10 @@ footer {
    Mobile View Optimizations (< 768px)
 ========================================================================= */
 @media (max-width: 768px) {
-  /* Layout global fix */
-  html, body {
-    overflow-x: hidden;
-  }
-
-  /* Hero adjustments */
+  /* Layout global fix: Do NOT put overflow-x on html/body, it breaks position: sticky! 
+     Instead, hide overflow on the specific sections that bleed. */
   .hero {
+    overflow-x: hidden;
     min-height: 100vh;
     padding-top: calc(var(--spacing-xl) + 60px);
     text-align: center;
@@ -1377,7 +1374,11 @@ footer {
     padding: var(--spacing-md);
   }
 
-  /* Parallax timeline adaptive sizing */
+  /* Parallax timeline adaptive sizing & scroll fix */
+  .parallax-wrapper {
+    height: 250vh; /* Drastically reduce excessive mobile scroll whitespace */
+  }
+  
   .parallax-header h2 {
     font-size: 2.2rem;
   }
@@ -1396,7 +1397,18 @@ footer {
     padding-top: 2rem;
   }
 
-  /* Pricing & CTA typography scale down */
+  /* Pricing overflow and typography fixes */
+  .pricing-grid {
+    gap: var(--spacing-lg);
+  }
+  
+  .pricing-card {
+    padding: 1.5rem;
+    /* Prevent box-shadows from forcing horizontal wrap */
+    max-width: calc(100vw - 3rem); 
+    margin: 0 auto;
+  }
+  
   .pricing-value {
     font-size: 2.4rem;
   }
